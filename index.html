@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="./index.css">
     <title>Document</title>
 </head>
-<body>
+<body onload="loadingDone()">
+    <div class="loader">
+        <img src="./image/loader.gif" alt="">
+    </div>
     <h1>Highlights Of Our Seniors</h1>
     <div class="wrapper">
         <div class="image img1">
@@ -94,5 +97,11 @@
             Your browser does not support HTML video.
         </video>
     </div>
+
+    <script>
+        const loadingDone = () => {
+            document.querySelector("body > div.loader").classList.add("active");
+        }
+    </script>
 </body>
 </html>

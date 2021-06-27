@@ -26,6 +26,26 @@ body > h1{
     text-align: center;
     text-transform: uppercase;
 }
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    pointer-events: none;
+}
+.loader.active{
+    opacity: 0;
+}
+.loader > img{
+    width: 50%;
+}
 body .wrapper{
     position: relative;
     width: 80%;
@@ -109,5 +129,8 @@ body .wrapper .image.img25{
         position: relative;
         width: 100%;
         margin-bottom: 15px;
+    }
+    .loader > img{
+        width: 90%;
     }
 }
